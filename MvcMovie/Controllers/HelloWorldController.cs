@@ -15,7 +15,7 @@ namespace MvcMovie.Controllers
         }
 
         //
-        // Olde "Welcome" Method = GET: /HelloWorld/Welcome/
+        // Old "Welcome" Method = GET: /HelloWorld/Welcome/
         // Requires using System.Text.Encodings.Web
 
         // New action "Welcome" Method
