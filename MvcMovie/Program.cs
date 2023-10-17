@@ -18,7 +18,6 @@ namespace MvcMovie
 
             var app = builder.Build();
 
-            // Add the seed Initializer
             using (var scope = app.Services.CreateScope()) 
             {
                 var services = scope.ServiceProvider;

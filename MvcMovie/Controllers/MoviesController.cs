@@ -14,6 +14,8 @@ namespace MvcMovie.Controllers
     {
         private readonly MvcMovieContext _context;
 
+        // The constructor uses Dependency Injection to inject
+        // The database context (MvcMovieContext) into the controller.
         public MoviesController(MvcMovieContext context)
         {
             _context = context;
@@ -35,6 +37,8 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
+            // A Lambda expression is passed in to the "FirstOrDefaultAsync" method
+            // To select movie entities that match the route data/query string value.
             var movie = await _context.Movie
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
